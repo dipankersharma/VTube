@@ -8,9 +8,15 @@
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 7px;
+  height: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #323131;
+  background: #c2c1c1;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #868688;
+  border-radius: 10px;
 }
