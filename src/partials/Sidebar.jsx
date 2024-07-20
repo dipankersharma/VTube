@@ -20,7 +20,7 @@ const Sidebar = () => {
 
   const newdata = showmore ? data : data.slice(0, 4);
   return (
-    <div className="h-[92vh] w-[15%] bg-[#ffffff]  overflow-y-auto p-5 flex flex-col">
+    <div className="h-[92vh] w-[15%] bg-[#ffffff]  overflow-y-auto p-5 flex flex-col fixed left-0">
       {/* home */}
       <nav className="flex flex-col text-zinc-800 mb-2">
         <Link
@@ -160,6 +160,7 @@ const Sidebar = () => {
         </h1>
         {newdata.map((item, index) => (
           <Link
+            key={index}
             className=" hover:bg-zinc-300 text-zinc-800 duration-300 rounded-lg p-2 flex items-center  gap-5 "
             to={"/"}
           >
@@ -174,7 +175,7 @@ const Sidebar = () => {
         {data.length > 5 && (
           <Link onClick={toggleShowmore} className="  p-2" to={"/"}>
             {showmore ? (
-              <i class="ri-arrow-down-wide-fill ml-[75px] text-2xl"></i>
+              <i className="ri-arrow-down-wide-fill ml-[75px] text-2xl"></i>
             ) : (
               <i class="ri-arrow-up-wide-fill ml-[75px] text-2xl"></i>
             )}
